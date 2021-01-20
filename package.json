@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/erensahan99/botcuk-discord-bot",
   "dependencies": {
-    "discord": "^0.8.2"
+    "discord.js": "^12.5.1"
   }
 }
