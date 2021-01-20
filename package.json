@@ -1,0 +1,26 @@
+{
+  "name": "botcuk-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erensahan99/botcuk-discord-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Eren ŞAHAN, Furkan PARLAK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erensahan99/botcuk-discord-bot/issues"
+  },
+  "homepage": "https://github.com/erensahan99/botcuk-discord-bot",
+  "dependencies": {
+    "discord": "^0.8.2"
+  }
+}
