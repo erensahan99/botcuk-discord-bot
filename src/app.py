@@ -1,15 +1,31 @@
 import os
 
 import discord
-from dotenv import load_dotenv
+from discord.ext import commands
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+# from dotenv import load_dotenv
 
-client = discord.Client()
+# load_dotenv()
+
+token = os.getenv('DISCORD_TOKEN')
+
+client = commands.Bot(command_prefix="!")
 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    print("I'm ready!!!")
+    await client.change_presence(status = discord.Status.online, activity = discord.Game("Naparsınız uşaklar😋"))
 
-client.run(TOKEN)
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$hello'):
+        await message.channel.send('Hello!')
+
+@client.command(name="ping")
+async def ping(ctx) :
+    await ctx.send(f"🏓 Pong with {str(round(client.latency, 2))}")
+
+client.run(token)
